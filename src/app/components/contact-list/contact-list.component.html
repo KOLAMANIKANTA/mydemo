@@ -1,0 +1,20 @@
+<table class="table table-danger text-center table-striped table-hover">
+    <thead class="bg-dark text-white">
+        <tr>
+            <th>SNO</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>LOCATION</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts;let i = index" (click)="selectedContact(contact)">
+            <td>{{i + 1}}</td>
+            <td>{{contact.name.first}} {{contact.name.last}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.location.city}}</td>
+          </tr>
+    </tbody>
+</table>
